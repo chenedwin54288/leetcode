@@ -11,7 +11,6 @@ class Solution(object):
 
         subseq_len = len(s)
         tosearch_len = len(t)
-        subseq_mark = [-1] * subseq_len
         next_search = 0
 
         # Note: an empty string is considered a subsequence of everything
@@ -23,7 +22,6 @@ class Solution(object):
         
         for i in range(0, tosearch_len):
             if t[i] == s[next_search]:
-                subseq_mark[next_search] = i
                 next_search += 1
             if next_search == subseq_len:
                 return True
