@@ -20,11 +20,6 @@ class Solution(object):
         if t == "":
             return False
 
-        # if subseq_len == 1 and subseq_len == 1:
-        #     if t[0] == s[0]:
-        #         return True
-        #     else:
-        #         return False
         
         for i in range(0, tosearch_len):
             if t[i] == s[next_search]:
