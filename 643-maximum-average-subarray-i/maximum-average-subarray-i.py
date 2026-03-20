@@ -14,6 +14,10 @@ class Solution(object):
             # 2 + 4 = 6 < 6
             # 2 + 4 - 1 = 5 < 6
             if i + k - 1 < len_nums:
+                # Making it faster by taking out the "left_most" and adding back "right_most"
+                # 1 + 12 -5 -6
+                #     12 -5 -6 + 50
+                #        -5 -6 + 50 + 3
                 if i - 1 >= 0:
                     temp_sum -= nums[i - 1]
                     temp_sum += nums[i + k - 1]
