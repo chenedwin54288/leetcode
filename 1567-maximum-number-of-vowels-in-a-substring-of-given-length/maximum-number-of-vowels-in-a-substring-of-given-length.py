@@ -14,7 +14,7 @@ class Solution(object):
                 return True
             return False 
         
-        # This question is very similar to Leetcode 1004
+        # This question is very similar to Leetcode 643
         # Just that you have extra O(5) in each step to check whether
         # a char is a vowel or not 
         for i in range(0, len_s):  
