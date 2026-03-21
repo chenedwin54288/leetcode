@@ -18,7 +18,6 @@ class Solution(object):
             elif nums[i] == 0:
                 one_deleted = True 
             
-            print(i, left_pointer)
             max_window = max(max_window, i - left_pointer)
         
         return max_window 
