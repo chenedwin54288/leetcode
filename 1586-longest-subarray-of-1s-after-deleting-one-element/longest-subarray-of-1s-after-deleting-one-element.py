@@ -11,6 +11,8 @@ class Solution(object):
         max_window = 0
         left_pointer = 0
         for i in range(0, len_nums):
+            # if encountered 0
+            # move left_pointer to index_of_previous_zero + 1 
             if nums[i] == 0 and one_deleted:
                 while(nums[left_pointer] != 0):
                     left_pointer += 1
