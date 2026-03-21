@@ -5,8 +5,7 @@ class Solution(object):
         :rtype: str
         """
         stack = []
-        len_s = len(s)
-        for i in range(0, len_s):
+        for i in range(0, len(s)):
             if s[i] == '*' and len(stack) > 0:
                 stack.pop()
             else:
