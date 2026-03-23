@@ -5,6 +5,10 @@ class Solution(object):
         :type n: int
         :rtype: List[List[int]]
         """
+
+        # The time complexity of this question will be O(C(9,k))
+        # where C(9,k) means the number of ways to choose a subset of k 
+        # elements from a fixed set of 9 distinct elements
         result = []
         def find_sum(start_i, list_len, sum_l, l):
             print(start_i, list_len, sum_l, l)
