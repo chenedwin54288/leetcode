@@ -9,14 +9,14 @@ class Solution(object):
         def find_sum(p_sum, l):
             if p_sum < target:
                 for j in candidates:
-                    l.append(j)
-                    find_sum(p_sum+j, l)
-                    l.pop()
+                    find_sum(p_sum+j, l+[j])
                 return 
             elif p_sum > target:
                 return
             else: # p_sum == target
                 sorted_l = sorted(l)
+
+                # very inefficient, ensuring uniqueness
                 if sorted_l not in result:
                     result.append(sorted_l)
         
