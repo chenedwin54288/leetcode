@@ -12,6 +12,7 @@ class Solution(object):
         # In efficient, but put the stuff in the linked-list
         # to a list (so we know the end and start)
         # => if we know the linked-list length beforehand, it might be easier
+        # O(n)
         red_list = []
         curr_node = head
         max_sum = 0
@@ -19,7 +20,7 @@ class Solution(object):
             red_list.append(curr_node)
             curr_node = curr_node.next
 
-        
+        # O(n/2) simplifies to O(n) 
         i = 0
         j = len(red_list) - 1
         while i < j:
