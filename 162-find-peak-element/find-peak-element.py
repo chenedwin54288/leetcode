@@ -47,13 +47,16 @@ class Solution(object):
         peak_end = len(nums) - 1
 
         while (not is_peak(current_peak) and peak_start < peak_end):
-            print(peak_start, current_peak, peak_end)
             if is_slope_up(current_peak):
+                # [1, {2}]
+                # peak_start 0, peak_end 1 => current_peak 1.. UP([0+1]/2)
                 peak_start = current_peak
                 current_peak = (peak_end + peak_start + 1)//2 #round up 
             else:
+                # [{2}, 1]
+                # peak_start 0, peak_end 1 => current_peak 0.. DOWN([0+1]/2)
                 peak_end = current_peak
-                current_peak = (peak_end + peak_start)//2 #round down
+                current_peak = (peak_end + peak_start)//2     #round down
         
         return current_peak
                 
