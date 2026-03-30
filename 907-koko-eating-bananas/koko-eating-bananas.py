@@ -49,7 +49,6 @@ class Solution(object):
         while low < high:
             k = (low + high) // 2
             
-            # Optimized compute_time logic using math.ceil
             total_time = calc_time(k)
             
             if total_time <= h:
