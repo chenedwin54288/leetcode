@@ -15,27 +15,27 @@ class Solution(object):
         # [3,6,7,11] h = 8
         # min_k = 1, max_k = 11 => k = 6
         # 1 + 1 + 2 + 2 == 6
-        # min_k = 1, max_k = 5 => k = 3
+        # min_k = 1, max_k = 6 => k = 3
         # 1 + 2 + 2 + 3 == 8 
-        # min_k = 1, max_k = 2 => k = 2
+        # min_k = 1, max_k = 3 => k = 2
         # 2 + 3 + 4 + 6 == 15
-        # min_k = 3, max_k = 2 => k = 3 
+        # min_k = 3, max_k = 3... STOP 
 
         # [30,11,23,4,20] h = 5
-        # min_k = 1, max_k = 30 => k = 16
-        # 3 + 1 + 2 + 1 + 2 == 9
-        # min_k = 17, max_k = 30 => k = 24
+        # min_k = 1, max_k = 30 => k = 15
+        # 2 + 1 + 2 + 1 + 2 == 8
+        # min_k = 16, max_k = 30 => k = 23
         # 2 + 1 + 1 + 1 + 1 == 6
-        # min_k = 25, max_k = 30 => k = 28
+        # min_k = 24, max_k = 30 => k = 27
         # 2 + 1 + 1 + 1 + 1 == 6
-        # min_k = 29, max_k = 30 => k = 30
-        # 1 + 1 + 1 + 1 + 1 == 5
-        # min_k = 31, max_k = 30 => k = 31...STOP 
+        # min_k = 28, max_k = 30 => k = 29
+        # 2 + 1 + 1 + 1 + 1 == 6
+        # min_k = 30, max_k = 30 ...STOP 
 
         # [2,2] h = 4
-        # min_k = 1, max_k = 2 => k = 2
-        # 1 + 1 == 2
-        # min_k = 1, max_k = 1 => k = 1... STOP
+        # min_k = 1, max_k = 2 => k = 1
+        # 2 + 2 == 4
+        # min_k = 2, max_k = 2... STOP
 
         def calc_time(k):
             total_time = 0
@@ -43,10 +43,8 @@ class Solution(object):
                 total_time += (p + k - 1) // k
             return total_time
             
-
         low = 1
         high = max(piles)
-        
     
         while low < high:
             k = (low + high) // 2
