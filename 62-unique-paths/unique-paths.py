@@ -13,7 +13,7 @@ class Solution(object):
                 else:
                     solu[i][j] = solu[i][j-1] + solu[i-1][j]
         
-        return solu[i][j]
+        return solu[m-1][n-1]
        
 
         
